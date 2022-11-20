@@ -41,7 +41,6 @@ export const RenderJobDetailsItem = ({
   createdAt,
   updatedAt,
 }) => {
-  console.log(pictures);
   const EventDuration = FormatEventDuration(createdAt, updatedAt);
   return (
     <MaineWrapper>

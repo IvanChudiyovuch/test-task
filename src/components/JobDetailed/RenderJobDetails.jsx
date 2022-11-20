@@ -18,12 +18,10 @@ export const RenderJobDetails = ({ respons, id }) => {
     updatedAt,
   } = respons;
 
-  console.log(respons);
-
   return (
     <>
-      <List>
-        <li key={id}>
+      <List key={id}>
+        <li>
           <RenderJobDetailsItem
             name={name}
             title={title}
