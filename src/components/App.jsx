@@ -7,9 +7,8 @@ const JobDetails = lazy(() => import('../pages/JobDetails'));
 export const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Jobs />}>
-        <Route path="/jobs/:id" element={<JobDetails />}></Route>
-      </Route>
+      <Route path="/" element={<Jobs />}></Route>
+      <Route path="/:id" element={<JobDetails />}></Route>
     </Routes>
   );
 };

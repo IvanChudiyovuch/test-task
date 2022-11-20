@@ -1,10 +1,17 @@
 import { useParams } from 'react-router-dom';
-import { useState } from 'react';
+
 import { RenderJobDetails } from 'components/JobDetailed/RenderJobDetails';
+import initialJob from '../components/job.json';
 
 const JobDetails = () => {
   const { id } = useParams();
-  const [respons] = useState(null);
+
+  const getJobById = jobId => {
+    return initialJob.find(job => job.id === jobId);
+  };
+
+  const respons = getJobById(id);
+
   return (
     <>
       <RenderJobDetails id={id} respons={respons} />

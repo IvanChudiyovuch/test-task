@@ -43,11 +43,11 @@ export const Img = styled.img`
 `;
 
 export const Text = styled.h2`
-margin: 0 0 8px 0;
+  margin: 0 0 8px 0;
   font-family: ${p => p.theme.fonts.body};
   font-weight: ${p => p.theme.fontWeights.bold};
   font-size: ${p => p.theme.fontSizes.m};
-  line-height: line-height: ${p => p.theme.lineHeights.heading};
+  line-height: ${p => p.theme.lineHeights.heading};
 `;
 
 export const Svg = styled.p`
@@ -71,7 +71,7 @@ export const Wrapper = styled.div`
   color: ${p => p.theme.colors.secondaryTextcolor};
 `;
 
-export const TextStyle = styled.p`
+export const TextStyle = styled.span`
   margin: 0;
   align-items: center;
   margin-left: ${p => p.theme.space[3]}px;

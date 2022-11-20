@@ -1,4 +1,3 @@
-// import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { RenderJobListItem } from './RenderJobListItem';
 import { Container, List, ListItem } from './RenderJobList.styled';

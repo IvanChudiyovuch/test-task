@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { CiBookmark } from 'react-icons/ci';
 import { ImLocation2 } from 'react-icons/im';
 import { FormatEventDuration } from '../../Utils/FormatEventDuration';
@@ -25,7 +25,6 @@ export const RenderJobListItem = ({
   createdAt,
   updatedAt,
 }) => {
-  const location = useLocation();
   const EventDuration = FormatEventDuration(createdAt, updatedAt);
   return (
     <>
@@ -35,8 +34,8 @@ export const RenderJobListItem = ({
             <MaineWrapperItem>
               <Img src={pictures[0]} alt={name} width="85" height="85" />
             </MaineWrapperItem>
-            <li>
-              <Link to={`/${id}`} state={{ from: location }}>
+            <MaineWrapperItem>
+              <Link to={`${id}`}>
                 <Text>{title}</Text>
               </Link>
 
@@ -45,7 +44,7 @@ export const RenderJobListItem = ({
                 <ImLocation2 width="13" height="18" />
                 <TextStyle>{address}</TextStyle>
               </Wrapper>
-            </li>
+            </MaineWrapperItem>
           </MaineWrapper>
         </Item>
         <Item>
